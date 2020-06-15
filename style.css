@@ -23,6 +23,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-image: linear-gradient(to right, #0d1226 0%, #1f1734 100%);
 
+  overflow: hidden;
   display: flex;
 }
 li {
@@ -35,7 +36,7 @@ li {
 
 aside {
   height: 100%;
-  padding: 35px 25px;
+  padding: 35px 20px;
   background: var(--primary);
   display: flex;
   flex-direction: column;
@@ -114,19 +115,66 @@ nav ul li:hover {
 }
 
 nav ul li.active {
-  font-size: 12px;
   color: var(--text-primary);
 }
 nav ul li svg {
   margin-right: 10px;
   width: 16px;
 }
+/* =============== */
+/* =============== */
+/* =============== */
+.menu-drop-label {
+  color: var(--text-primary);
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+  display: none;
+}
+.menu-drop-label span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: width 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.menu-drop-label span:first-child {
+  width: 12px;
+  margin-bottom: 5px;
+}
+#menu-drop {
+  display: none;
+}
+#menu-drop:checked ~ .menu-drop-label span:first-child {
+  width: 20px;
+}
+#menu-drop:checked ~ .menu-drop-label span:last-child {
+  width: 10px;
+}
+/* =============== */
+/* =============== */
+/* =============== */
+
+/* =============== */
+/* =============== */
+/* =============== */
+.close-dropdown {
+  width: 20px;
+  height: 20px;
+  color: var(--text-primary);
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
 
 /* =============== */
 /* =============== */
 /* =============== */
 .container {
-  padding: 20px 0px 20px 60px;
+  padding: 20px 20px 20px 60px;
 }
 .container .search {
   display: flex;
@@ -319,7 +367,6 @@ nav ul li svg {
 .views .suggestions .tracks {
   width: 400px;
   display: flex;
-  padding: 10px;
   align-items: center;
   overflow-x: scroll;
   padding: 10px 5px;
@@ -403,4 +450,191 @@ nav ul li svg {
   color: var(--text-secondary);
   letter-spacing: 2px;
   font-weight: 300;
+}
+
+/* ======= */
+@media (max-width: 1262px) {
+  body {
+    flex-direction: column-reverse;
+  }
+  aside {
+    width: 100%;
+    height: 0px;
+    padding: 50px 20px;
+    flex-direction: row;
+    box-shadow: 4px 0px 12px rgb(32, 15, 86, 0.2);
+  }
+  nav {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+    border-top: none;
+    padding: 0 20px;
+  }
+  nav ul:not(:first-child) {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  /**/
+  .container {
+    padding: 10px 50px;
+  }
+}
+
+@media (max-width: 998px) {
+  .featured-playlists {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+  .featured-playlists > h2 {
+    font-size: 16px;
+  }
+  .featured-playlists .playlists {
+    padding: 15px 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .featured-playlists .playlists .playlist:not(:first-child) {
+    margin-left: 10px;
+  }
+  .featured-playlists .playlists .playlist .img {
+    width: 250px;
+    height: 140px;
+  }
+  .featured-playlists .playlists .playlist .info-playlist {
+    margin-top: 10px;
+  }
+  /*  */
+  .views {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .views .profile-views > h2 {
+    font-size: 16px;
+  }
+  .views .profile-views .container-views {
+    margin-top: 10px;
+  }
+  .views .profile-views .view:not(:first-child) {
+    margin-top: 0px;
+  }
+  .views .profile-views .view .img {
+    width: 45px;
+    height: 45px;
+  }
+  .views .profile-views .view .info p {
+    font-size: 12px;
+  }
+  /*  */
+  .views .suggestions {
+    padding: 0 30px;
+  }
+  .views .suggestions > h2 {
+    font-size: 16px;
+  }
+  .views .suggestions .tracks {
+    padding: 10px 0px;
+  }
+  .views .suggestions .tracks .track {
+    margin-right: 10px;
+  }
+  .views .suggestions .tracks .track .img {
+    width: 110px;
+    height: 110px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 857px) {
+  .container {
+    padding: 10px 20px;
+  }
+  .views .suggestions .tracks {
+    width: 300px;
+  }
+}
+
+@media (max-width: 668px) {
+  aside {
+    justify-content: space-between;
+    padding: 50px 30px;
+  }
+  nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  nav ul:not(:first-child) {
+    margin-top: 50px;
+  }
+  nav ul li {
+    font-size: 20px;
+  }
+  nav ul li:not(:first-child) {
+    margin-top: 20px;
+  }
+  nav ul li svg {
+    margin-right: 12px;
+    width: 25px;
+  }
+  nav.active {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu-drop-label {
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .close-dropdown {
+    display: block;
+  }
+}
+
+@media (max-width: 636px) {
+  body {
+    height: auto;
+    overflow: visible;
+  }
+  .container {
+    padding: 20px;
+  }
+  .views {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .views .suggestions {
+    margin: 10px 0 30px 0;
+  }
 }

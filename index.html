@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music</title>
+    <title>uMusic</title>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -26,7 +26,19 @@
         </div>
       </div>
       <!--  -->
+      <div class="dropdown">
+        <input type="checkbox" name="menu-drop" id="menu-drop" />
+        <label for="menu-drop" class="menu-drop-label">
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <!--  -->
       <nav>
+        <span class="close-dropdown">
+          <i data-feather="x"></i>
+        </span>
         <ul>
           <li class="active"><i data-feather="aperture"></i> Overview</li>
           <li><i data-feather="trello"></i> News</li>
@@ -66,7 +78,7 @@
         <div class="playlists">
           <div class="playlist pl1">
             <div class="img">
-              <img src="./assets/playlist1.jpg" alt="" />
+              <img src="./assets/playlist1.jpg" alt="Thumbnail Playlist" />
             </div>
             <div class="info-playlist">
               <h2>Only STARDUST</h2>
@@ -76,7 +88,7 @@
           <!--  -->
           <div class="playlist pl2">
             <div class="img">
-              <img src="./assets/playlist2.jpg" alt="" />
+              <img src="./assets/playlist2.jpg" alt="Thumbnail Playlist" />
             </div>
             <div class="info-playlist">
               <h2>Mike Vella</h2>
@@ -84,9 +96,9 @@
             </div>
           </div>
           <!--  -->
-          <div class="playlist pl2">
+          <div class="playlist pl3">
             <div class="img">
-              <img src="./assets/playlist3.jpg" alt="" />
+              <img src="./assets/playlist3.jpg" alt="Thumbnail Playlist" />
             </div>
             <div class="info-playlist">
               <h2>the best singles s2</h2>
@@ -94,9 +106,9 @@
             </div>
           </div>
           <!--  -->
-          <div class="playlist pl2">
+          <div class="playlist pl4">
             <div class="img">
-              <img src="./assets/playlist4.jpg" alt="" />
+              <img src="./assets/playlist4.jpg" alt="Thumbnail Playlist" />
             </div>
             <div class="info-playlist">
               <h2>Indie</h2>
@@ -190,6 +202,7 @@
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
     <script>
       feather.replace();
     </script>
