@@ -1,5 +1,5 @@
 <h1 align="center">uMusic</h1>
-<p align="center">✒️Design study for music library responsive using html and css</p>
+<p align="center">✒️ Design study for music library responsive using html and css</p>
 <p align="center">
   <a href="http://umusic.surge.sh/">Check deploy</a>
 </p>
