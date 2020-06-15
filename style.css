@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --primary: #040517;
+
+  --text-primary: #e5e5e5e7;
+  --text-secondary: #f5f5f555;
+  --scroll: rgb(32, 15, 86);
+}
+::placeholder {
+  color: var(--text-secondary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(to right, #0d1226 0%, #1f1734 100%);
+
+  display: flex;
+}
+li {
+  list-style: none;
+}
+
+/* =============== */
+/* =============== */
+/* =============== */
+
+aside {
+  height: 100%;
+  padding: 35px 25px;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: inset 4px 4px 12px rgb(32, 15, 86, 0.2);
+}
+aside .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside .profile .img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: url(./assets/profile.jpg) no-repeat 55% 50%;
+  background-size: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+aside .profile .data p {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+aside .profile .data span {
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.18s linear;
+}
+
+aside .profile .data span svg {
+  width: 12px;
+  margin-left: 6px;
+}
+
+aside .profile .data span:hover {
+  color: var(--text-primary);
+}
+
+/* =============== */
+/* =============== */
+/* =============== */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+nav ul {
+  width: 100%;
+  border-top: 1px solid #ececec11;
+  padding: 15px 0px;
+}
+nav ul:not(:first-child) {
+  margin-top: 15px;
+}
+nav ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.18s linear;
+}
+nav ul li:hover {
+  color: var(--text-primary);
+}
+
+nav ul li.active {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+nav ul li svg {
+  margin-right: 10px;
+  width: 16px;
+}
+
+/* =============== */
+/* =============== */
+/* =============== */
+.container {
+  padding: 20px 0px 20px 60px;
+}
+.container .search {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .search label {
+  color: var(--text-secondary);
+  transition: color 0.18s linear;
+}
+.container .search svg {
+  width: 18px;
+}
+.container .search input {
+  background: none;
+  border: none;
+  width: 300px;
+  padding: 5px 15px 8px;
+  color: var(--text-primary);
+  font-size: 12px;
+}
+.container .search input:focus + label {
+  color: var(--text-primary);
+}
+
+/* =============== */
+/* =============== */
+/* =============== */
+
+.featured-playlists {
+  margin-top: 15px;
+  padding: 20px 0;
+}
+.featured-playlists > h2 {
+  color: var(--text-primary);
+  font-size: 18px;
+}
+.featured-playlists .playlists {
+  padding: 15px 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.featured-playlists .playlists::-webkit-scrollbar {
+  background: #49349c11;
+  height: 6px;
+  border-radius: 6px;
+}
+.featured-playlists .playlists::-webkit-scrollbar-thumb {
+  background: var(--scroll);
+  height: 6px;
+  border-radius: 6px;
+}
+
+.featured-playlists .playlists .playlist:not(:first-child) {
+  margin-left: 20px;
+}
+
+.featured-playlists .playlists .playlist .img {
+  width: 300px;
+  height: 180px;
+  background-size: cover;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.featured-playlists .playlists .playlist .img img {
+  width: 100%;
+  opacity: 0.6;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  opacity: 0.6;
+}
+.featured-playlists .playlists .playlist .img img:hover {
+  opacity: 1;
+  transform: scale(1.1) translateX(-10px);
+}
+
+.featured-playlists .playlists .playlist .info-playlist {
+  margin-top: 15px;
+}
+.featured-playlists .playlists .playlist .info-playlist h2 {
+  font-size: 16px;
+  color: var(--text-primary);
+}
+.featured-playlists .playlists .playlist .info-playlist span {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+/* =============== */
+/* =============== */
+/* =============== */
+.views {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.views .profile-views > h2 {
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.views .profile-views .container-views {
+  margin-top: 15px;
+}
+
+.views .profile-views .view:not(:first-child) {
+  margin-top: 10px;
+}
+
+.views .profile-views .view {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+}
+.views .profile-views .view:hover {
+  opacity: 1;
+}
+
+.views .profile-views .view .img {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+.views .profile-views .v1 .img {
+  background: url(./assets/view1.jpg) no-repeat 50% 5%;
+  background-size: 200%;
+}
+
+.views .profile-views .v2 .img {
+  background: url(./assets/view2.jpg) no-repeat 70% 40%;
+  background-size: 200%;
+}
+
+.views .profile-views .v3 .img {
+  background: url(./assets/view3.jpg) no-repeat 50% 10%;
+  background-size: 200%;
+}
+
+.views .profile-views .view .info {
+  margin-right: 100px;
+}
+
+.views .profile-views .view .info p {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+.views .profile-views .view .info span {
+  color: var(--text-secondary);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+
+.views .profile-views .view span {
+  color: var(--text-secondary);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  margin-left: auto;
+}
+
+/* =============== */
+/* =============== */
+/* =============== */
+
+.views .suggestions {
+  padding: 0 50px;
+}
+
+.views .suggestions > h2 {
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.views .suggestions .tracks {
+  width: 400px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 10px 5px;
+}
+.views .suggestions .tracks::-webkit-scrollbar {
+  background: #49349c11;
+  height: 6px;
+  border-radius: 6px;
+}
+.views .suggestions .tracks::-webkit-scrollbar-thumb {
+  background: var(--scroll);
+  height: 6px;
+  border-radius: 6px;
+}
+
+.views .suggestions .tracks .track {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+}
+.views .suggestions .tracks .track:hover {
+  opacity: 1;
+}
+
+.views .suggestions .tracks .track .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.views .suggestions .tracks .t1 .img {
+  background: url(./assets/track1.jpg) no-repeat 0% 50%;
+  background-size: cover;
+}
+
+.views .suggestions .tracks .t2 .img {
+  background: url(./assets/track2.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.views .suggestions .tracks .t3 .img {
+  background: url(./assets/track3.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.views .suggestions .tracks .t4 .img {
+  background: url(./assets/track4.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.views .suggestions .tracks .t5 .img {
+  background: url(./assets/track5.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.views .suggestions .tracks .t6 .img {
+  background: url(./assets/track6.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.views .suggestions .tracks .t7 .img {
+  background: url(./assets/track7.jpg) no-repeat 30% 50%;
+  background-size: cover;
+}
+
+.views .suggestions .tracks .track p {
+  font-size: 12px;
+  color: var(--text-primary);
+  letter-spacing: 1.5px;
+}
+
+.views .suggestions .tracks .track span {
+  font-size: 10px;
+  color: var(--text-secondary);
+  letter-spacing: 2px;
+  font-weight: 300;
+}

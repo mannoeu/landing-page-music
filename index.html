@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ASIDE -->
+    <!-- 
+      *
+      *
+     -->
+    <aside>
+      <!--  -->
+      <div class="profile">
+        <div class="img"></div>
+        <div class="data">
+          <p>Dany Schudler</p>
+          <span>
+            Edit profile
+            <i data-feather="settings"></i>
+          </span>
+        </div>
+      </div>
+      <!--  -->
+      <nav>
+        <ul>
+          <li class="active"><i data-feather="aperture"></i> Overview</li>
+          <li><i data-feather="trello"></i> News</li>
+          <li><i data-feather="music"></i> Playlists</li>
+          <li><i data-feather="radio"></i> Discover</li>
+        </ul>
+        <!--  -->
+        <ul>
+          <li><i data-feather="sliders"></i> Dashboard</li>
+          <li><i data-feather="message-square"></i> Messages</li>
+          <li><i data-feather="bell"></i> Notifications</li>
+          <li><i data-feather="user"></i> Account</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <!-- 
+      *
+      *
+     -->
+    <div class="container">
+      <!--  -->
+      <div class="search">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search artists, playlists or tracks"
+        />
+        <label for="search"><i data-feather="search"></i></label>
+      </div>
+      <!--  -->
+      <div class="featured-playlists">
+        <!--  -->
+        <h2>Featured Playlists</h2>
+        <div class="playlists">
+          <div class="playlist pl1">
+            <div class="img">
+              <img src="./assets/playlist1.jpg" alt="" />
+            </div>
+            <div class="info-playlist">
+              <h2>Only STARDUST</h2>
+              <span>24 tracks</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="playlist pl2">
+            <div class="img">
+              <img src="./assets/playlist2.jpg" alt="" />
+            </div>
+            <div class="info-playlist">
+              <h2>Mike Vella</h2>
+              <span>12 tracks</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="playlist pl2">
+            <div class="img">
+              <img src="./assets/playlist3.jpg" alt="" />
+            </div>
+            <div class="info-playlist">
+              <h2>the best singles s2</h2>
+              <span>163 tracks</span>
+            </div>
+          </div>
+          <!--  -->
+          <div class="playlist pl2">
+            <div class="img">
+              <img src="./assets/playlist4.jpg" alt="" />
+            </div>
+            <div class="info-playlist">
+              <h2>Indie</h2>
+              <span>138 tracks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="views">
+        <div class="profile-views">
+          <!--  -->
+          <h2>Profile Views</h2>
+          <div class="container-views">
+            <div class="view v1">
+              <div class="img"></div>
+              <div class="info">
+                <p>Jenny Villa</p>
+                <span>1 day ago</span>
+              </div>
+              <span>4 albums</span>
+            </div>
+            <!--  -->
+            <div class="view v2">
+              <div class="img"></div>
+              <div class="info">
+                <p>Aquila</p>
+                <span>3 days ago</span>
+              </div>
+              <span>2 albums</span>
+            </div>
+            <!--  -->
+            <div class="view v3">
+              <div class="img"></div>
+              <div class="info">
+                <p>This is War</p>
+                <span>2 week ago</span>
+              </div>
+              <span>5 albums</span>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="suggestions">
+          <h2>Tracks</h2>
+          <div class="tracks">
+            <!--  -->
+            <div class="track t1">
+              <div class="img"></div>
+              <p>Mahara Bon</p>
+              <span>Sexy in Paris</span>
+            </div>
+            <!--  -->
+            <div class="track t2">
+              <div class="img"></div>
+              <p>Donna</p>
+              <span>Pseudo-Life</span>
+            </div>
+            <!--  -->
+            <div class="track t3">
+              <div class="img"></div>
+              <p>Avven</p>
+              <span>Magic</span>
+            </div>
+            <!--  -->
+            <div class="track t4">
+              <div class="img"></div>
+              <p>Cony Matt</p>
+              <span>Living in hell</span>
+            </div>
+            <!--  -->
+            <div class="track t5">
+              <div class="img"></div>
+              <p>Claudia Cany</p>
+              <span>Remember</span>
+            </div>
+            <!--  -->
+            <div class="track t6">
+              <div class="img"></div>
+              <p>Samm</p>
+              <span>Same - Huly</span>
+            </div>
+            <!--  -->
+            <div class="track t7">
+              <div class="img"></div>
+              <p>Pacify</p>
+              <span>Portrait</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
